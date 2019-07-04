@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			h1{
+				width: 300px;
+				top: 10px;
+				position: absolute;
+				animation: tMove 30s linear infinite;
+			}
+			body{
+				overflow: hidden;
+			}
+			#container{
+				width: 400px;
+				height: 400px;
+				margin: 100px auto;
+				margin-bottom: 0 ;
+				overflow: hidden;
+			}
+			#container li{
+				width: 30%;
+				height: 30%;
+				margin: 1%;
+				float: left;
+			}
+			#container li img{
+				width: 100%;
+				height: 100%;
+			}
+			p{
+				width: 100px;
+				background: #ccc;
+				margin: 20px auto;
+			}
+			@keyframes tMove{
+				from{
+					left: 100%;
+				}
+				to{
+					left: -300px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>打鼠宝宝</h1>
+		<ul id="container">
+			<li><img src="img/5.jpg" alt="" /></li>
+			<li><img src="img/5.jpg" alt="" /></li>
+			<li><img src="img/5.jpg" alt="" /></li>
+			<li><img src="img/5.jpg" alt="" /></li>
+			<li><img src="img/5.jpg" alt="" /></li>
+			<li><img src="img/5.jpg" alt="" /></li>
+			<li><img src="img/5.jpg" alt="" /></li>
+			<li><img src="img/5.jpg" alt="" /></li>
+			<li><img src="img/5.jpg" alt="" /></li>
+		</ul>
+		<p>得分: <span id="score">0</span></p>
+		<p>等级：<span id="level">1</span></p>	
+		<audio src="mp3/Taylor Swift - We Are Never Ever Getting Back Together.mp3" autoplay="autoplay" loop="loop"></audio>
+		<audio src="mp3/895.mp3" id="victory"></audio>
+	</body>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			this.imgs = document.getElementsByTagName('img')
+			this.scoreText = document.getElementById('score')
+			this.levelText = document.getElementById('level')
+			this.picSrc = ['img/2.gif', 'img/5.jpg'] 
+			this.timer = setInterval(changeImg, 1000)
+			this.victory = document.getElementById('victory')
+			var i
+			for(i = 0; i < imgs.length; i++){
+				imgs[i].onclick = clickFunc()
+			}
+		}
+	</script>
+</html>

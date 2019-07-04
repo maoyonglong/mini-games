@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <style type="text/css">
+    	#i{
+    		width: 30%;
+    		height: 22%;
+    		left: 35%;
+    		top: 65%;
+    		border: 1px solid red;
+    		position: absolute;
+    	}
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<div id="box">
+		<img src="Animations/angry/angry_00.jpg" alt="" id="cat"/>
+		<img src="Buttons/cymbal/cymbal.png" alt="" id="cymbal" class="left btn"/>
+		<img src="Buttons/drink/drink.png" alt="" id="drink" class="left btn"/>
+		<img src="Buttons/eat/eat.png" alt="" id="eat"/ class="left btn">
+		<img src="Buttons/fart/fart.png" alt="" id="fart" class="right btn"/>
+		<img src="Buttons/pie/pie.png" alt="" id="pie" class="right btn"/>
+		<img src="Buttons/scratch/scratch.png" alt="" id="scratch" class="right btn"/>
+	</div>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	window.onload = function(){
+		// 确定猫和按钮元素
+		this.cat = document.getElementById('cat')
+		this.btns = document.getElementsByClassName('btn')
+		init()
+	}
+	</script>
+</body>
+</html>
